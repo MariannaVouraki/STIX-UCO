@@ -3,18 +3,26 @@
 @prefix ex: <http://example.org/stix-uco/> .
 @prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
 @prefix pattern: <https://ontology.unifiedcyberontology.org/uco/pattern/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:bundle--f0af3c36-a642-4cb0-8526-b4ca899cc1db a core:Bundle ;
     cti:hasMember ex:identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca,
         ex:indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1,
         ex:relationship--3d1dd3cc-eb47-4704-9c77-ceff2971b95c,
-        ex:threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c .
+        ex:threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c ;
+    cti:stixId "bundle--f0af3c36-a642-4cb0-8526-b4ca899cc1db" ;
+    cti:stixType "bundle" .
 
 ex:relationship--3d1dd3cc-eb47-4704-9c77-ceff2971b95c a core:Relationship ;
     cti:objectMarking ex:marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ed ;
+    cti:relationshipType "indicates" ;
+    cti:sourceRef "indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2017-04-27T16:18:24.318Z" ;
-    cti:stixModified "2017-04-27T16:18:24.318Z" ;
+    cti:stixCreated "2017-04-27T16:18:24.318000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--3d1dd3cc-eb47-4704-9c77-ceff2971b95c" ;
+    cti:stixModified "2017-04-27T16:18:24.318000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c" ;
     core:kindOfRelationship "indicates" ;
     core:source ex:indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1 ;
     core:target ex:threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c .
@@ -28,10 +36,12 @@ ex:indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1 a pattern:Pattern ;
         "malicious-activity" ;
     cti:patternType "stix" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2017-04-27T16:18:24.318Z" ;
-    cti:stixModified "2017-04-27T16:18:24.318Z" ;
+    cti:stixCreated "2017-04-27T16:18:24.318000+00:00"^^xsd:dateTime ;
+    cti:stixId "indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1" ;
+    cti:stixModified "2017-04-27T16:18:24.318000+00:00"^^xsd:dateTime ;
     cti:stixPattern "[email-message:from_ref.value MATCHES '.+\\\\banking@g0thamnatl\\\\.com$']" ;
-    cti:validFrom "2017-04-27T16:18:24.318Z" ;
+    cti:stixType "indicator" ;
+    cti:validFrom "2017-04-27T16:18:24.318000+00:00"^^xsd:dateTime ;
     core:description "Known to be used by The Joker." ;
     core:name "Fake email address" .
 
@@ -44,18 +54,23 @@ ex:threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c a identity:Organization ;
     cti:resourceLevel "team" ;
     cti:role "director" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2017-04-27T16:18:24.318Z" ;
-    cti:stixModified "2017-04-27T16:18:24.318Z" ;
+    cti:stixCreated "2017-04-27T16:18:24.318000+00:00"^^xsd:dateTime ;
+    cti:stixId "threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c" ;
+    cti:stixModified "2017-04-27T16:18:24.318000+00:00"^^xsd:dateTime ;
+    cti:stixType "threat-actor" ;
     cti:threatActorType "criminal",
         "terrorist" ;
     core:name "The Joker" .
 
 ex:identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca a identity:Identity,
         identity:Organization ;
+    cti:contactInformation "contact@gothamnational.com" ;
     cti:identityClass "organization" ;
     cti:sector "financial-services" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2017-04-27T16:18:24.318Z" ;
-    cti:stixModified "2017-04-27T16:18:24.318Z" ;
+    cti:stixCreated "2017-04-27T16:18:24.318000+00:00"^^xsd:dateTime ;
+    cti:stixId "identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca" ;
+    cti:stixModified "2017-04-27T16:18:24.318000+00:00"^^xsd:dateTime ;
+    cti:stixType "identity" ;
     core:name "Gotham National Bank" .
 

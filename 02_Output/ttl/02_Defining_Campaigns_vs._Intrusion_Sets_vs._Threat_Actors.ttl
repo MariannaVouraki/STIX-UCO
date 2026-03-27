@@ -3,6 +3,7 @@
 @prefix cti: <http://example.org/cti-ext/> .
 @prefix ex: <http://example.org/stix-uco/> .
 @prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:bundle--97b40f76-c1b8-4407-b050-ff177f3d67ed a core:Bundle ;
     cti:hasMember ex:attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a,
@@ -30,148 +31,254 @@ ex:bundle--97b40f76-c1b8-4407-b050-ff177f3d67ed a core:Bundle ;
         ex:relationship--ba30893a-400a-43f3-b193-69d65d2a8f40,
         ex:relationship--c171fd27-2a8a-42b7-8293-34016b70c1c8,
         ex:relationship--d8b7932d-0ecb-4891-b021-c78ff2b63747,
-        ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 .
+        ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 ;
+    cti:stixId "bundle--97b40f76-c1b8-4407-b050-ff177f3d67ed" ;
+    cti:stixType "bundle" .
+
+ex:attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a-external-reference-CAPEC-148-0 a cti:ExternalReference ;
+    cti:externalId "CAPEC-148" ;
+    cti:sourceName "capec" ;
+    cti:url "https://capec.mitre.org/data/definitions/148.html" .
+
+ex:attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c-external-reference-CAPEC-488-0 a cti:ExternalReference ;
+    cti:externalId "CAPEC-488" ;
+    cti:sourceName "capec" ;
+    cti:url "https://capec.mitre.org/data/definitions/488.html" .
+
+ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b-external-reference-website-0 a cti:ExternalReference ;
+    cti:sourceName "website" ;
+    cti:url "http://www.bpp.bn" .
 
 ex:relationship--06964095-5750-41fe-a9af-6c6a9d995489 a core:Relationship ;
+    cti:relationshipType "uses" ;
+    cti:sourceRef "intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.940Z" ;
-    cti:stixModified "2020-02-29T17:41:44.940Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.940000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--06964095-5750-41fe-a9af-6c6a9d995489" ;
+    cti:stixModified "2020-02-29T17:41:44.940000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a" ;
     core:kindOfRelationship "uses" ;
     core:source ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 ;
     core:target ex:attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a .
 
 ex:relationship--1f4ee02a-7f6e-45a6-aedd-c1492af5e179 a core:Relationship ;
+    cti:relationshipType "targets" ;
+    cti:sourceRef "campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.942Z" ;
-    cti:stixModified "2020-02-29T17:41:44.942Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.942000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--1f4ee02a-7f6e-45a6-aedd-c1492af5e179" ;
+    cti:stixModified "2020-02-29T17:41:44.942000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "identity--ddfe7140-2ba4-48e4-b19a-df069432103b" ;
     core:kindOfRelationship "targets" ;
     core:source ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727 ;
     core:target ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b .
 
 ex:relationship--33c22977-d104-45d8-be19-273f7ab03de1 a core:Relationship ;
+    cti:relationshipType "uses" ;
+    cti:sourceRef "campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.940Z" ;
-    cti:stixModified "2020-02-29T17:41:44.940Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.940000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--33c22977-d104-45d8-be19-273f7ab03de1" ;
+    cti:stixModified "2020-02-29T17:41:44.940000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a" ;
     core:kindOfRelationship "uses" ;
     core:source ex:campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e ;
     core:target ex:attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a .
 
 ex:relationship--4292a6df-fb16-43d1-805d-dc1b33946fdf a core:Relationship ;
+    cti:relationshipType "targets" ;
+    cti:sourceRef "threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.941Z" ;
-    cti:stixModified "2020-02-29T17:41:44.941Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.941000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--4292a6df-fb16-43d1-805d-dc1b33946fdf" ;
+    cti:stixModified "2020-02-29T17:41:44.941000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "identity--ddfe7140-2ba4-48e4-b19a-df069432103b" ;
     core:kindOfRelationship "targets" ;
     core:source ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 ;
     core:target ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b .
 
 ex:relationship--4bd67b9e-d112-4ea6-98bb-080a051667c7 a core:Relationship ;
+    cti:relationshipType "attributed-to" ;
+    cti:sourceRef "threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.941Z" ;
-    cti:stixModified "2020-02-29T17:41:44.941Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.941000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--4bd67b9e-d112-4ea6-98bb-080a051667c7" ;
+    cti:stixModified "2020-02-29T17:41:44.941000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "identity--8c6af861-7b20-41ef-9b59-6344fd872a8f" ;
     core:kindOfRelationship "attributed-to" ;
     core:source ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 ;
     core:target ex:identity--8c6af861-7b20-41ef-9b59-6344fd872a8f .
 
 ex:relationship--4fe5dab1-fd6d-41aa-b8b1-d3118a708284 a core:Relationship ;
+    cti:relationshipType "uses" ;
+    cti:sourceRef "intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.940Z" ;
-    cti:stixModified "2020-02-29T17:41:44.940Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.940000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--4fe5dab1-fd6d-41aa-b8b1-d3118a708284" ;
+    cti:stixModified "2020-02-29T17:41:44.940000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c" ;
     core:kindOfRelationship "uses" ;
     core:source ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 ;
     core:target ex:attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c .
 
 ex:relationship--5047c2c0-524b-4afd-9cd6-e197efe59495 a core:Relationship ;
+    cti:relationshipType "attributed-to" ;
+    cti:sourceRef "campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.939Z" ;
-    cti:stixModified "2020-02-29T17:41:44.939Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.939000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--5047c2c0-524b-4afd-9cd6-e197efe59495" ;
+    cti:stixModified "2020-02-29T17:41:44.939000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713" ;
     core:kindOfRelationship "attributed-to" ;
     core:source ex:campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e ;
     core:target ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 .
 
 ex:relationship--53a55c73-f2c8-47b9-8e50-ae34d8c5da4d a core:Relationship ;
+    cti:relationshipType "attributed-to" ;
+    cti:sourceRef "campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.938Z" ;
-    cti:stixModified "2020-02-29T17:41:44.938Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.938000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--53a55c73-f2c8-47b9-8e50-ae34d8c5da4d" ;
+    cti:stixModified "2020-02-29T17:41:44.938000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500" ;
     core:kindOfRelationship "attributed-to" ;
     core:source ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727 ;
     core:target ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 .
 
 ex:relationship--554e3341-d7b1-4b3c-a522-28ef52fbb49b a core:Relationship ;
+    cti:relationshipType "targets" ;
+    cti:sourceRef "intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.939Z" ;
-    cti:stixModified "2020-02-29T17:41:44.939Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.939000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--554e3341-d7b1-4b3c-a522-28ef52fbb49b" ;
+    cti:stixModified "2020-02-29T17:41:44.939000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "identity--ddfe7140-2ba4-48e4-b19a-df069432103b" ;
     core:kindOfRelationship "targets" ;
     core:source ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 ;
     core:target ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b .
 
 ex:relationship--70880ead-0b19-4785-be52-a69064d4cb6c a core:Relationship ;
+    cti:relationshipType "uses" ;
+    cti:sourceRef "threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.942Z" ;
-    cti:stixModified "2020-02-29T17:41:44.942Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.942000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--70880ead-0b19-4785-be52-a69064d4cb6c" ;
+    cti:stixModified "2020-02-29T17:41:44.942000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c" ;
     core:kindOfRelationship "uses" ;
     core:source ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 ;
     core:target ex:attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c .
 
 ex:relationship--8848cba9-4c7b-4695-bc09-5033a6f20ff4 a core:Relationship ;
+    cti:relationshipType "uses" ;
+    cti:sourceRef "campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.941Z" ;
-    cti:stixModified "2020-02-29T17:41:44.941Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.941000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--8848cba9-4c7b-4695-bc09-5033a6f20ff4" ;
+    cti:stixModified "2020-02-29T17:41:44.941000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c" ;
     core:kindOfRelationship "uses" ;
     core:source ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727 ;
     core:target ex:attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c .
 
 ex:relationship--96cfbc6f-5c08-4372-b811-b90fbb2ec180 a core:Relationship ;
+    cti:relationshipType "targets" ;
+    cti:sourceRef "campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.940Z" ;
-    cti:stixModified "2020-02-29T17:41:44.940Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.940000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--96cfbc6f-5c08-4372-b811-b90fbb2ec180" ;
+    cti:stixModified "2020-02-29T17:41:44.940000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "identity--ddfe7140-2ba4-48e4-b19a-df069432103b" ;
     core:kindOfRelationship "targets" ;
     core:source ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727 ;
     core:target ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b .
 
 ex:relationship--98765000-efdf-4a86-8681-36481ceae57f a core:Relationship ;
+    cti:relationshipType "attributed-to" ;
+    cti:sourceRef "campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.938Z" ;
-    cti:stixModified "2020-02-29T17:41:44.938Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.938000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--98765000-efdf-4a86-8681-36481ceae57f" ;
+    cti:stixModified "2020-02-29T17:41:44.938000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500" ;
     core:kindOfRelationship "attributed-to" ;
     core:source ex:campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e ;
     core:target ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 .
 
 ex:relationship--9cc131ca-b64d-4ab1-a300-5e4a0073280a a core:Relationship ;
+    cti:relationshipType "attributed-to" ;
+    cti:sourceRef "campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.939Z" ;
-    cti:stixModified "2020-02-29T17:41:44.939Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.939000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--9cc131ca-b64d-4ab1-a300-5e4a0073280a" ;
+    cti:stixModified "2020-02-29T17:41:44.939000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713" ;
     core:kindOfRelationship "attributed-to" ;
     core:source ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727 ;
     core:target ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 .
 
 ex:relationship--a97b3ea5-4ca1-46a0-a7ad-f10143ce22b2 a core:Relationship ;
+    cti:relationshipType "impersonates" ;
+    cti:sourceRef "threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.941Z" ;
-    cti:stixModified "2020-02-29T17:41:44.941Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.941000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--a97b3ea5-4ca1-46a0-a7ad-f10143ce22b2" ;
+    cti:stixModified "2020-02-29T17:41:44.941000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "identity--ddfe7140-2ba4-48e4-b19a-df069432103b" ;
     core:kindOfRelationship "impersonates" ;
     core:source ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 ;
     core:target ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b .
 
 ex:relationship--ba30893a-400a-43f3-b193-69d65d2a8f40 a core:Relationship ;
+    cti:relationshipType "uses" ;
+    cti:sourceRef "threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.942Z" ;
-    cti:stixModified "2020-02-29T17:41:44.942Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.942000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--ba30893a-400a-43f3-b193-69d65d2a8f40" ;
+    cti:stixModified "2020-02-29T17:41:44.942000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a" ;
     core:kindOfRelationship "uses" ;
     core:source ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 ;
     core:target ex:attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a .
 
 ex:relationship--c171fd27-2a8a-42b7-8293-34016b70c1c8 a core:Relationship ;
+    cti:relationshipType "attributed-to" ;
+    cti:sourceRef "intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.939Z" ;
-    cti:stixModified "2020-02-29T17:41:44.939Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.939000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--c171fd27-2a8a-42b7-8293-34016b70c1c8" ;
+    cti:stixModified "2020-02-29T17:41:44.939000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500" ;
     core:kindOfRelationship "attributed-to" ;
     core:source ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 ;
     core:target ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 .
 
 ex:relationship--d8b7932d-0ecb-4891-b021-c78ff2b63747 a core:Relationship ;
+    cti:relationshipType "targets" ;
+    cti:sourceRef "campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T17:41:44.940Z" ;
-    cti:stixModified "2020-02-29T17:41:44.940Z" ;
+    cti:stixCreated "2020-02-29T17:41:44.940000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--d8b7932d-0ecb-4891-b021-c78ff2b63747" ;
+    cti:stixModified "2020-02-29T17:41:44.940000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "identity--ddfe7140-2ba4-48e4-b19a-df069432103b" ;
     core:kindOfRelationship "targets" ;
     core:source ex:campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e ;
     core:target ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b .
@@ -180,64 +287,78 @@ ex:identity--8c6af861-7b20-41ef-9b59-6344fd872a8f a identity:Identity,
         identity:Organization ;
     cti:identityClass "organization" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
-    cti:stixModified "2016-08-08T15:50:10.983Z" ;
+    cti:stixCreated "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixId "identity--8c6af861-7b20-41ef-9b59-6344fd872a8f" ;
+    cti:stixModified "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixType "identity" ;
     core:name "Franistan Intelligence" .
 
 ex:attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a a action:ActionPattern ;
-    cti:externalReference "{\"source_name\": \"capec\", \"url\": \"https://capec.mitre.org/data/definitions/148.html\", \"external_id\": \"CAPEC-148\"}" ;
+    cti:hasExternalReference ex:attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a-external-reference-CAPEC-148-0 ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
-    cti:stixModified "2017-01-30T21:15:04.127Z" ;
+    cti:stixCreated "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixId "attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a" ;
+    cti:stixModified "2017-01-30T21:15:04.127000+00:00"^^xsd:dateTime ;
+    cti:stixType "attack-pattern" ;
     core:name "Content Spoofing" .
 
 ex:attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c a action:ActionPattern ;
-    cti:externalReference "{\"source_name\": \"capec\", \"url\": \"https://capec.mitre.org/data/definitions/488.html\", \"external_id\": \"CAPEC-488\"}" ;
+    cti:hasExternalReference ex:attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c-external-reference-CAPEC-488-0 ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
-    cti:stixModified "2017-01-30T21:15:04.127Z" ;
+    cti:stixCreated "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixId "attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c" ;
+    cti:stixModified "2017-01-30T21:15:04.127000+00:00"^^xsd:dateTime ;
+    cti:stixType "attack-pattern" ;
     core:name "HTTP Flood" .
 
 ex:campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e a core:Event ;
     cti:alias "OBF" ;
-    cti:firstSeen "2016-01-08T12:50:40.123Z" ;
+    cti:firstSeen "2016-01-08T12:50:40.123000+00:00"^^xsd:dateTime ;
     cti:objective "Hack www.bpp.bn" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
-    cti:stixModified "2016-08-08T15:50:10.983Z" ;
+    cti:stixCreated "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixId "campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e" ;
+    cti:stixModified "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixType "campaign" ;
     core:description "A concerted effort to insert false information into the BPP's web pages." ;
     core:name "Operation Bran Flakes" .
 
 ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727 a core:Event ;
     cti:alias "ORB" ;
-    cti:firstSeen "2016-02-07T19:45:32.126Z" ;
+    cti:firstSeen "2016-02-07T19:45:32.126000+00:00"^^xsd:dateTime ;
     cti:objective "Flood www.bpp.bn" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
-    cti:stixModified "2016-08-08T15:50:10.983Z" ;
+    cti:stixCreated "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixId "campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727" ;
+    cti:stixModified "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixType "campaign" ;
     core:description "A DDOS campaign to flood BPP web servers." ;
     core:name "Operation Raisin Bran" .
 
 ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b a identity:Identity,
         identity:Organization ;
-    cti:externalReference "{\"source_name\": \"website\", \"url\": \"http://www.bpp.bn\"}" ;
+    cti:hasExternalReference ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b-external-reference-website-0 ;
     cti:identityClass "organization" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
-    cti:stixModified "2016-08-08T15:50:10.983Z" ;
+    cti:stixCreated "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixId "identity--ddfe7140-2ba4-48e4-b19a-df069432103b" ;
+    cti:stixModified "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixType "identity" ;
     core:name "Branistan Peoples Party" .
 
 ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 a identity:Identity ;
     cti:alias "Bran-teaser" ;
-    cti:firstSeen "2016-01-08T12:50:40.123Z" ;
+    cti:firstSeen "2016-01-08T12:50:40.123000+00:00"^^xsd:dateTime ;
     cti:goal "Disrupt the BPP",
         "Influence the Branistan election" ;
     cti:primaryMotivation "ideology" ;
     cti:resourceLevel "government" ;
     cti:secondaryMotivation "dominance" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
-    cti:stixModified "2016-08-08T15:50:10.983Z" ;
+    cti:stixCreated "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixId "intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713" ;
+    cti:stixModified "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixType "intrusion-set" ;
     core:description "An advanced persistent threat that seeks to disrupt Branistan's election with multiple attacks." ;
     core:name "APT BPP" .
 
@@ -249,8 +370,10 @@ ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 a identity:Organization ;
     cti:secondaryMotivation "dominance" ;
     cti:sophistication "strategic" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
-    cti:stixModified "2016-08-08T15:50:10.983Z" ;
+    cti:stixCreated "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixId "threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500" ;
+    cti:stixModified "2016-08-08T15:50:10.983000+00:00"^^xsd:dateTime ;
+    cti:stixType "threat-actor" ;
     cti:threatActorType "nation-state" ;
     core:name "Fake BPP (Branistan Peoples Party)" .
 

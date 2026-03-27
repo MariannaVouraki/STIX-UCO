@@ -2,26 +2,37 @@
 @prefix cti: <http://example.org/cti-ext/> .
 @prefix ex: <http://example.org/stix-uco/> .
 @prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:bundle--601cee35-6b16-4e68-a3e7-9ec7d755b4c3 a core:Bundle ;
     cti:hasMember ex:identity--733c5838-34d9-4fbf-949c-62aba761184c,
         ex:relationship--a2e3efb5-351d-4d46-97a0-6897ee7c77a0,
-        ex:threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428 .
+        ex:threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428 ;
+    cti:stixId "bundle--601cee35-6b16-4e68-a3e7-9ec7d755b4c3" ;
+    cti:stixType "bundle" .
 
 ex:relationship--a2e3efb5-351d-4d46-97a0-6897ee7c77a0 a core:Relationship ;
+    cti:relationshipType "attributed-to" ;
+    cti:sourceRef "threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2020-02-29T18:01:28.577Z" ;
-    cti:stixModified "2020-02-29T18:01:28.577Z" ;
+    cti:stixCreated "2020-02-29T18:01:28.577000+00:00"^^xsd:dateTime ;
+    cti:stixId "relationship--a2e3efb5-351d-4d46-97a0-6897ee7c77a0" ;
+    cti:stixModified "2020-02-29T18:01:28.577000+00:00"^^xsd:dateTime ;
+    cti:stixType "relationship" ;
+    cti:targetRef "identity--733c5838-34d9-4fbf-949c-62aba761184c" ;
     core:kindOfRelationship "attributed-to" ;
     core:source ex:threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428 ;
     core:target ex:identity--733c5838-34d9-4fbf-949c-62aba761184c .
 
 ex:identity--733c5838-34d9-4fbf-949c-62aba761184c a identity:Identity,
         identity:Organization ;
+    cti:contactInformation "disco-team@stealthemail.com" ;
     cti:identityClass "organization" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2016-08-23T18:05:49.307Z" ;
-    cti:stixModified "2016-08-23T18:05:49.307Z" ;
+    cti:stixCreated "2016-08-23T18:05:49.307000+00:00"^^xsd:dateTime ;
+    cti:stixId "identity--733c5838-34d9-4fbf-949c-62aba761184c" ;
+    cti:stixModified "2016-08-23T18:05:49.307000+00:00"^^xsd:dateTime ;
+    cti:stixType "identity" ;
     core:description "Disco Team is the name of an organized threat actor crime-syndicate." ;
     core:name "Disco Team" .
 
@@ -33,8 +44,10 @@ ex:threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428 a identity:Organization ;
     cti:role "agent" ;
     cti:sophistication "expert" ;
     cti:specVersion "2.1" ;
-    cti:stixCreated "2014-11-19T23:39:03.893Z" ;
-    cti:stixModified "2014-11-19T23:39:03.893Z" ;
+    cti:stixCreated "2014-11-19T23:39:03.893000+00:00"^^xsd:dateTime ;
+    cti:stixId "threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428" ;
+    cti:stixModified "2014-11-19T23:39:03.893000+00:00"^^xsd:dateTime ;
+    cti:stixType "threat-actor" ;
     cti:threatActorType "crime-syndicate" ;
     core:description "This organized threat actor group operates to create profit from all types of crime." ;
     core:name "Disco Team Threat Actor Group" .
