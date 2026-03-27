@@ -265,6 +265,7 @@ def convert_file(json_path: Path, output_ttl_path: Path) -> Graph:
 
 
 def main() -> None:
+    print("STARTING SCRIPT...")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     merged_graph = build_graph()
 
@@ -292,4 +293,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    print("STARTING SCRIPT...")
     main()
