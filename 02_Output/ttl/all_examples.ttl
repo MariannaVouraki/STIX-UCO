@@ -75,13 +75,6 @@ ex:bundle--97b40f76-c1b8-4407-b050-ff177f3d67ed a core:Bundle ;
         ex:relationship--d8b7932d-0ecb-4891-b021-c78ff2b63747,
         ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 .
 
-ex:bundle--cf20f99b-3ed2-4a9f-b4f1-d660a7fc8324 a core:Bundle ;
-    cti:hasMember ex:identity--e88ab115-7768-4630-baa3-3d49a7d946ea,
-        ex:indicator--8390fd29-24ed-45d4-84d7-c5e5feaf195d,
-        ex:relationship--a20b8626-a15e-41f0-bcb1-c05321e126f0,
-        ex:relationship--b345f1d0-09c5-4a71-bfc6-a52bd5923a01,
-        ex:threat-actor--6d179234-61fc-40c4-ae86-3d53308d8e65 .
-
 ex:bundle--dbe491fe-6faf-4125-b019-d8938bc0294d a core:Bundle ;
     cti:hasMember ex:identity--611d9d41-dba5-4e13-9b29-e22488058ffc,
         ex:indicator--33fe3b22-0201-47cf-85d0-97c02164528d,
@@ -261,14 +254,6 @@ ex:relationship--9cc131ca-b64d-4ab1-a300-5e4a0073280a a core:Relationship ;
     core:source ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727 ;
     core:target ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 .
 
-ex:relationship--a20b8626-a15e-41f0-bcb1-c05321e126f0 a core:Relationship ;
-    cti:specVersion "2.1" ;
-    cti:stixCreated "2015-05-15T09:12:16.432Z" ;
-    cti:stixModified "2015-05-15T09:12:16.432Z" ;
-    core:kindOfRelationship "attributed-to" ;
-    core:source ex:threat-actor--6d179234-61fc-40c4-ae86-3d53308d8e65 ;
-    core:target ex:identity--e88ab115-7768-4630-baa3-3d49a7d946ea .
-
 ex:relationship--a2e3efb5-351d-4d46-97a0-6897ee7c77a0 a core:Relationship ;
     cti:specVersion "2.1" ;
     cti:stixCreated "2020-02-29T18:01:28.577Z" ;
@@ -284,14 +269,6 @@ ex:relationship--a97b3ea5-4ca1-46a0-a7ad-f10143ce22b2 a core:Relationship ;
     core:kindOfRelationship "impersonates" ;
     core:source ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 ;
     core:target ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b .
-
-ex:relationship--b345f1d0-09c5-4a71-bfc6-a52bd5923a01 a core:Relationship ;
-    cti:specVersion "2.1" ;
-    cti:stixCreated "2015-05-15T09:12:16.432Z" ;
-    cti:stixModified "2015-05-15T09:12:16.432Z" ;
-    core:kindOfRelationship "indicates" ;
-    core:source ex:indicator--8390fd29-24ed-45d4-84d7-c5e5feaf195d ;
-    core:target ex:threat-actor--6d179234-61fc-40c4-ae86-3d53308d8e65 .
 
 ex:relationship--ba30893a-400a-43f3-b193-69d65d2a8f40 a core:Relationship ;
     cti:specVersion "2.1" ;
@@ -415,14 +392,6 @@ ex:identity--8c6af861-7b20-41ef-9b59-6344fd872a8f a identity:Identity,
     cti:stixModified "2016-08-08T15:50:10.983Z" ;
     core:name "Franistan Intelligence" .
 
-ex:identity--e88ab115-7768-4630-baa3-3d49a7d946ea a identity:Identity ;
-    cti:identityClass "individual" ;
-    cti:sector "government-national" ;
-    cti:specVersion "2.1" ;
-    cti:stixCreated "2015-05-15T09:12:16.432Z" ;
-    cti:stixModified "2015-05-15T09:12:16.432Z" ;
-    core:name "Wang Dong" .
-
 ex:indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1 a pattern:Pattern ;
     cti:createdBy ex:identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca ;
     cti:granularMarking "{\"marking_ref\": \"marking-definition--34098fce-860f-48ae-8e50-ebd3cc5e41da\", \"selectors\": [\"indicator_types.[0]\", \"name\", \"pattern\"]}",
@@ -438,17 +407,6 @@ ex:indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1 a pattern:Pattern ;
     cti:validFrom "2017-04-27T16:18:24.318Z" ;
     core:description "Known to be used by The Joker." ;
     core:name "Fake email address" .
-
-ex:indicator--8390fd29-24ed-45d4-84d7-c5e5feaf195d a pattern:Pattern ;
-    cti:indicatorType "malicious-activity" ;
-    cti:patternType "stix" ;
-    cti:specVersion "2.1" ;
-    cti:stixCreated "2015-05-15T09:12:16.432Z" ;
-    cti:stixModified "2015-05-15T09:12:16.432Z" ;
-    cti:stixPattern "[domain-name:value = 'arrowservice.net']" ;
-    cti:validFrom "2015-05-15T09:12:16.432678Z" ;
-    core:description "Test description." ;
-    core:name "FQDN arrowservice.net" .
 
 ex:indicator--9299f726-ce06-492e-8472-2b52ccb53191 a pattern:Pattern ;
     cti:createdBy ex:identity--39012926-a052-44c4-ae48-caaf4a10ee6e ;
@@ -605,22 +563,6 @@ ex:identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca a identity:Identity,
     cti:stixCreated "2017-04-27T16:18:24.318Z" ;
     cti:stixModified "2017-04-27T16:18:24.318Z" ;
     core:name "Gotham National Bank" .
-
-ex:threat-actor--6d179234-61fc-40c4-ae86-3d53308d8e65 a identity:Organization ;
-    cti:alias "Greenfield",
-        "JackWang",
-        "Wang Dong" ;
-    cti:primaryMotivation "organizational-gain" ;
-    cti:resourceLevel "government" ;
-    cti:role "agent",
-        "infrastructure-operator",
-        "malware-author" ;
-    cti:specVersion "2.1" ;
-    cti:stixCreated "2015-05-15T09:12:16.432Z" ;
-    cti:stixModified "2015-05-15T09:12:16.432Z" ;
-    cti:threatActorType "nation-state",
-        "spy" ;
-    core:name "Ugly Gorilla" .
 
 ex:attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a a action:ActionPattern ;
     cti:externalReference "{\"source_name\": \"capec\", \"url\": \"https://capec.mitre.org/data/definitions/148.html\", \"external_id\": \"CAPEC-148\"}" ;
