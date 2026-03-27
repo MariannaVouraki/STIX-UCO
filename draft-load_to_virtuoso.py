@@ -1,5 +1,6 @@
 from pathlib import Path
 import requests
+#ΔΕΝ ΕΧΕΙ ΓΙΝΕ ΤΕΣΤ This script is a placeholder for loading the generated TTL file into Virtuoso.
 
 VIRTUOSO_SPARQL_ENDPOINT = "http://localhost:8890/sparql"
 TTL_FILE = Path("02_Output/ttl/all_examples.ttl")
