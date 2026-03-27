@@ -18,7 +18,7 @@ PATTERN = Namespace("https://ontology.unifiedcyberontology.org/uco/pattern/")
 OBSERVABLE = Namespace("https://ontology.unifiedcyberontology.org/uco/observable/")
 
 BASE_DIR = Path(__file__).resolve().parent
-INPUT_DIR = BASE_DIR / "STIX_EXAMPLES"
+INPUT_DIR = BASE_DIR / "01_STIX_EXAMPLES"
 OUTPUT_DIR = BASE_DIR / "02_Output" / "ttl"
 
 # =========================

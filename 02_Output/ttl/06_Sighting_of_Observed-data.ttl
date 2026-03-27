@@ -1,0 +1,85 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix cti: <http://example.org/cti-ext/> .
+@prefix ex: <http://example.org/stix-uco/> .
+@prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix tool: <https://ontology.unifiedcyberontology.org/uco/tool/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:bundle--1affa123-0a4f-4fc5-81c6-fc1b058f9e44 a core:Bundle ;
+    cti:hasMember ex:file--364fe3e5-b1f4-5ba3-b951-ee5983b3538d,
+        ex:identity--7865b6d2-a4af-45c5-b582-afe5ec376c33,
+        ex:identity--987eeee1-413a-44ac-96cc-0a8acdcc2f2c,
+        ex:malware--ae560258-a5cb-4be8-8f05-013d6712295f,
+        ex:observed-data--a0d34360-66ad-4977-b255-d9e1080421c4,
+        ex:observed-data--cf8eaa41-6f4c-482e-89b9-9cd2d6a83cb1,
+        ex:sighting--779c4ae8-e134-4180-baa4-03141095d971,
+        ex:windows-registry-key--16b80d14-d574-5620-abad-10ff304b1c26 .
+
+ex:sighting--779c4ae8-e134-4180-baa4-03141095d971 a core:Relationship ;
+    cti:createdBy ex:identity--987eeee1-413a-44ac-96cc-0a8acdcc2f2c ;
+    cti:firstSeen "2017-02-28T19:07:24.856Z" ;
+    cti:lastSeen "2017-02-28T19:07:24.857Z" ;
+    cti:observedDataRef ex:observed-data--a0d34360-66ad-4977-b255-d9e1080421c4,
+        ex:observed-data--cf8eaa41-6f4c-482e-89b9-9cd2d6a83cb1 ;
+    cti:sightingCount 1 ;
+    cti:sightingOf ex:malware--ae560258-a5cb-4be8-8f05-013d6712295f ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-02-28T19:37:11.213Z" ;
+    cti:stixModified "2017-02-28T19:37:11.213Z" ;
+    cti:whereSighted ex:identity--987eeee1-413a-44ac-96cc-0a8acdcc2f2c .
+
+ex:file--364fe3e5-b1f4-5ba3-b951-ee5983b3538d a cti:UnknownStixObject ;
+    cti:specVersion "2.1" ;
+    core:name "resume.pdf" .
+
+ex:identity--7865b6d2-a4af-45c5-b582-afe5ec376c33 a identity:Identity,
+        identity:Organization ;
+    cti:identityClass "organization" ;
+    cti:sector "technology" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2013-04-14T13:07:49.812Z" ;
+    cti:stixModified "2013-04-14T13:07:49.812Z" ;
+    core:name "Pym Technologies" .
+
+ex:malware--ae560258-a5cb-4be8-8f05-013d6712295f a tool:MaliciousTool ;
+    cti:createdBy ex:identity--7865b6d2-a4af-45c5-b582-afe5ec376c33 ;
+    cti:isFamily false ;
+    cti:malwareType "remote-access-trojan" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2014-02-20T09:16:08.989Z" ;
+    cti:stixModified "2014-02-20T09:16:08.989Z" ;
+    core:description "Trojan that is disguised as the executable file resume.pdf., it also creates a registry key." ;
+    core:name "Online Job Site Trojan" .
+
+ex:observed-data--a0d34360-66ad-4977-b255-d9e1080421c4 a core:Event ;
+    cti:createdBy ex:identity--987eeee1-413a-44ac-96cc-0a8acdcc2f2c ;
+    cti:firstObserved "2017-02-27T21:37:11.213Z" ;
+    cti:lastObserved "2017-02-27T21:37:11.214Z" ;
+    cti:numberObserved 1 ;
+    cti:referencesObject ex:windows-registry-key--16b80d14-d574-5620-abad-10ff304b1c26 ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-02-28T19:37:11.213Z" ;
+    cti:stixModified "2017-02-28T19:37:11.213Z" .
+
+ex:observed-data--cf8eaa41-6f4c-482e-89b9-9cd2d6a83cb1 a core:Event ;
+    cti:createdBy ex:identity--987eeee1-413a-44ac-96cc-0a8acdcc2f2c ;
+    cti:firstObserved "2017-02-27T21:37:11.213Z" ;
+    cti:lastObserved "2017-02-27T21:37:11.213Z" ;
+    cti:numberObserved 1 ;
+    cti:referencesObject ex:file--364fe3e5-b1f4-5ba3-b951-ee5983b3538d ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-02-28T19:37:11.213Z" ;
+    cti:stixModified "2017-02-28T19:37:11.213Z" .
+
+ex:windows-registry-key--16b80d14-d574-5620-abad-10ff304b1c26 a cti:UnknownStixObject ;
+    cti:specVersion "2.1" .
+
+ex:identity--987eeee1-413a-44ac-96cc-0a8acdcc2f2c a identity:Identity,
+        identity:Organization ;
+    cti:identityClass "organization" ;
+    cti:sector "technology" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-01-14T13:07:49.812Z" ;
+    cti:stixModified "2017-01-14T13:07:49.812Z" ;
+    core:name "Oscorp Industries" .
+

@@ -1,0 +1,61 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix cti: <http://example.org/cti-ext/> .
+@prefix ex: <http://example.org/stix-uco/> .
+@prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix pattern: <https://ontology.unifiedcyberontology.org/uco/pattern/> .
+
+ex:bundle--f0af3c36-a642-4cb0-8526-b4ca899cc1db a core:Bundle ;
+    cti:hasMember ex:identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca,
+        ex:indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1,
+        ex:relationship--3d1dd3cc-eb47-4704-9c77-ceff2971b95c,
+        ex:threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c .
+
+ex:relationship--3d1dd3cc-eb47-4704-9c77-ceff2971b95c a core:Relationship ;
+    cti:objectMarking ex:marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ed ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-27T16:18:24.318Z" ;
+    cti:stixModified "2017-04-27T16:18:24.318Z" ;
+    core:kindOfRelationship "indicates" ;
+    core:source ex:indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1 ;
+    core:target ex:threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c .
+
+ex:indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1 a pattern:Pattern ;
+    cti:createdBy ex:identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca ;
+    cti:granularMarking "{\"marking_ref\": \"marking-definition--34098fce-860f-48ae-8e50-ebd3cc5e41da\", \"selectors\": [\"indicator_types.[0]\", \"name\", \"pattern\"]}",
+        "{\"marking_ref\": \"marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ed\", \"selectors\": [\"description\"]}",
+        "{\"marking_ref\": \"marking-definition--f88d31f6-486f-44da-b317-01333bde0b82\", \"selectors\": [\"indicator_types.[1]\"]}" ;
+    cti:indicatorType "attribution",
+        "malicious-activity" ;
+    cti:patternType "stix" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-27T16:18:24.318Z" ;
+    cti:stixModified "2017-04-27T16:18:24.318Z" ;
+    cti:stixPattern "[email-message:from_ref.value MATCHES '.+\\\\banking@g0thamnatl\\\\.com$']" ;
+    cti:validFrom "2017-04-27T16:18:24.318Z" ;
+    core:description "Known to be used by The Joker." ;
+    core:name "Fake email address" .
+
+ex:threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c a identity:Organization ;
+    cti:alias "Joe Kerr",
+        "The Clown Prince of Crime" ;
+    cti:createdBy ex:identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca ;
+    cti:objectMarking ex:marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ed ;
+    cti:primaryMotivation "personal-satisfaction" ;
+    cti:resourceLevel "team" ;
+    cti:role "director" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-27T16:18:24.318Z" ;
+    cti:stixModified "2017-04-27T16:18:24.318Z" ;
+    cti:threatActorType "criminal",
+        "terrorist" ;
+    core:name "The Joker" .
+
+ex:identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca a identity:Identity,
+        identity:Organization ;
+    cti:identityClass "organization" ;
+    cti:sector "financial-services" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-27T16:18:24.318Z" ;
+    cti:stixModified "2017-04-27T16:18:24.318Z" ;
+    core:name "Gotham National Bank" .
+

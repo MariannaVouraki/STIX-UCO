@@ -1,0 +1,42 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix cti: <http://example.org/cti-ext/> .
+@prefix ex: <http://example.org/stix-uco/> .
+@prefix pattern: <https://ontology.unifiedcyberontology.org/uco/pattern/> .
+@prefix tool: <https://ontology.unifiedcyberontology.org/uco/tool/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:bundle--56be2a3b-1534-4bef-8fe9-602926274089 a core:Bundle ;
+    cti:hasMember ex:indicator--d81f86b9-975b-4c0b-875e-810c5ad45a4f,
+        ex:malware--162d917e-766f-4611-b5d6-652791454fca,
+        ex:relationship--864af2ea-46f9-4d23-b3a2-1c2adf81c265 .
+
+ex:relationship--864af2ea-46f9-4d23-b3a2-1c2adf81c265 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T18:03:58.029Z" ;
+    cti:stixModified "2020-02-29T18:03:58.029Z" ;
+    core:kindOfRelationship "indicates" ;
+    core:source ex:indicator--d81f86b9-975b-4c0b-875e-810c5ad45a4f ;
+    core:target ex:malware--162d917e-766f-4611-b5d6-652791454fca .
+
+ex:indicator--d81f86b9-975b-4c0b-875e-810c5ad45a4f a pattern:Pattern ;
+    cti:indicatorType "malicious-activity" ;
+    cti:patternType "stix" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2014-06-29T13:49:37.079Z" ;
+    cti:stixModified "2014-06-29T13:49:37.079Z" ;
+    cti:stixPattern "[url:value = 'http://x4z9arb.cn/4712/']" ;
+    cti:validFrom "2014-06-29T13:49:37.079Z" ;
+    core:description "This organized threat actor group operates to create profit from all types of crime." ;
+    core:name "Malicious site hosting downloader" .
+
+ex:malware--162d917e-766f-4611-b5d6-652791454fca a tool:MaliciousTool ;
+    cti:isFamily false ;
+    cti:killChainPhase "{\"kill_chain_name\": \"mandiant-attack-lifecycle-model\", \"phase_name\": \"establish-foothold\"}" ;
+    cti:malwareType "backdoor",
+        "remote-access-trojan" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2014-06-30T09:15:17.182Z" ;
+    cti:stixModified "2014-06-30T09:15:17.182Z" ;
+    core:description "This malware attempts to download remote files after establishing a foothold as a backdoor." ;
+    core:name "x4z9arb backdoor" .
+

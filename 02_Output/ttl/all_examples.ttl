@@ -1,0 +1,712 @@
+@prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix cti: <http://example.org/cti-ext/> .
+@prefix ex: <http://example.org/stix-uco/> .
+@prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix pattern: <https://ontology.unifiedcyberontology.org/uco/pattern/> .
+@prefix tool: <https://ontology.unifiedcyberontology.org/uco/tool/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:bundle--0ecd8123-90d5-46e0-9cd4-65d4999b3a2e a core:Bundle ;
+    cti:hasMember ex:attack-pattern--8ac90ff3-ecf8-4835-95b8-6aea6a623df5,
+        ex:identity--1621d4d4-b67d-41e3-9670-f01faf20d111,
+        ex:malware--d1c612bc-146f-4b65-b7b0-9a54a14150a4,
+        ex:relationship--3cd2d6f9-0ded-486b-8dca-606283a8997f,
+        ex:relationship--56e5f1c8-08f3-4e24-9e8e-f87d844672ec,
+        ex:relationship--d44019b6-b8f7-4cb3-837e-7fd3c5724b87,
+        ex:threat-actor--9a8a0d25-7636-429b-a99e-b2a73cd0f11f .
+
+ex:bundle--1affa123-0a4f-4fc5-81c6-fc1b058f9e44 a core:Bundle ;
+    cti:hasMember ex:file--364fe3e5-b1f4-5ba3-b951-ee5983b3538d,
+        ex:identity--7865b6d2-a4af-45c5-b582-afe5ec376c33,
+        ex:identity--987eeee1-413a-44ac-96cc-0a8acdcc2f2c,
+        ex:malware--ae560258-a5cb-4be8-8f05-013d6712295f,
+        ex:observed-data--a0d34360-66ad-4977-b255-d9e1080421c4,
+        ex:observed-data--cf8eaa41-6f4c-482e-89b9-9cd2d6a83cb1,
+        ex:sighting--779c4ae8-e134-4180-baa4-03141095d971,
+        ex:windows-registry-key--16b80d14-d574-5620-abad-10ff304b1c26 .
+
+ex:bundle--2a25c3c8-5d88-4ae9-862a-cc3396442317 a core:Bundle ;
+    cti:hasMember ex:indicator--a932fcc6-e032-476c-826f-cb970a5a1ade,
+        ex:malware--fdd60b30-b67c-41e3-b0b9-f01faf20d111,
+        ex:relationship--29dcdf68-1b0c-4e16-94ed-bcc7a9572f69 .
+
+ex:bundle--2ac7882f-76a3-4a9b-97b3-811b3af1c7c0 a core:Bundle ;
+    cti:hasMember ex:identity--39012926-a052-44c4-ae48-caaf4a10ee6e,
+        ex:identity--5206ba14-478f-4b0b-9a48-395f690c20a2,
+        ex:indicator--9299f726-ce06-492e-8472-2b52ccb53191,
+        ex:sighting--8356e820-8080-4692-aa91-ecbe94006833 .
+
+ex:bundle--56be2a3b-1534-4bef-8fe9-602926274089 a core:Bundle ;
+    cti:hasMember ex:indicator--d81f86b9-975b-4c0b-875e-810c5ad45a4f,
+        ex:malware--162d917e-766f-4611-b5d6-652791454fca,
+        ex:relationship--864af2ea-46f9-4d23-b3a2-1c2adf81c265 .
+
+ex:bundle--601cee35-6b16-4e68-a3e7-9ec7d755b4c3 a core:Bundle ;
+    cti:hasMember ex:identity--733c5838-34d9-4fbf-949c-62aba761184c,
+        ex:relationship--a2e3efb5-351d-4d46-97a0-6897ee7c77a0,
+        ex:threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428 .
+
+ex:bundle--97b40f76-c1b8-4407-b050-ff177f3d67ed a core:Bundle ;
+    cti:hasMember ex:attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a,
+        ex:attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c,
+        ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727,
+        ex:campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e,
+        ex:identity--8c6af861-7b20-41ef-9b59-6344fd872a8f,
+        ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b,
+        ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713,
+        ex:relationship--06964095-5750-41fe-a9af-6c6a9d995489,
+        ex:relationship--1f4ee02a-7f6e-45a6-aedd-c1492af5e179,
+        ex:relationship--33c22977-d104-45d8-be19-273f7ab03de1,
+        ex:relationship--4292a6df-fb16-43d1-805d-dc1b33946fdf,
+        ex:relationship--4bd67b9e-d112-4ea6-98bb-080a051667c7,
+        ex:relationship--4fe5dab1-fd6d-41aa-b8b1-d3118a708284,
+        ex:relationship--5047c2c0-524b-4afd-9cd6-e197efe59495,
+        ex:relationship--53a55c73-f2c8-47b9-8e50-ae34d8c5da4d,
+        ex:relationship--554e3341-d7b1-4b3c-a522-28ef52fbb49b,
+        ex:relationship--70880ead-0b19-4785-be52-a69064d4cb6c,
+        ex:relationship--8848cba9-4c7b-4695-bc09-5033a6f20ff4,
+        ex:relationship--96cfbc6f-5c08-4372-b811-b90fbb2ec180,
+        ex:relationship--98765000-efdf-4a86-8681-36481ceae57f,
+        ex:relationship--9cc131ca-b64d-4ab1-a300-5e4a0073280a,
+        ex:relationship--a97b3ea5-4ca1-46a0-a7ad-f10143ce22b2,
+        ex:relationship--ba30893a-400a-43f3-b193-69d65d2a8f40,
+        ex:relationship--c171fd27-2a8a-42b7-8293-34016b70c1c8,
+        ex:relationship--d8b7932d-0ecb-4891-b021-c78ff2b63747,
+        ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 .
+
+ex:bundle--cf20f99b-3ed2-4a9f-b4f1-d660a7fc8324 a core:Bundle ;
+    cti:hasMember ex:identity--e88ab115-7768-4630-baa3-3d49a7d946ea,
+        ex:indicator--8390fd29-24ed-45d4-84d7-c5e5feaf195d,
+        ex:relationship--a20b8626-a15e-41f0-bcb1-c05321e126f0,
+        ex:relationship--b345f1d0-09c5-4a71-bfc6-a52bd5923a01,
+        ex:threat-actor--6d179234-61fc-40c4-ae86-3d53308d8e65 .
+
+ex:bundle--dbe491fe-6faf-4125-b019-d8938bc0294d a core:Bundle ;
+    cti:hasMember ex:identity--611d9d41-dba5-4e13-9b29-e22488058ffc,
+        ex:indicator--33fe3b22-0201-47cf-85d0-97c02164528d,
+        ex:marking-definition--d81f86b9-975b-4c0b-875e-810c5ad45a4f,
+        ex:marking-definition--f88d31f6-486f-44da-b317-01333bde0b82 .
+
+ex:bundle--f0af3c36-a642-4cb0-8526-b4ca899cc1db a core:Bundle ;
+    cti:hasMember ex:identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca,
+        ex:indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1,
+        ex:relationship--3d1dd3cc-eb47-4704-9c77-ceff2971b95c,
+        ex:threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c .
+
+ex:indicator--33fe3b22-0201-47cf-85d0-97c02164528d a pattern:Pattern ;
+    cti:createdBy ex:identity--611d9d41-dba5-4e13-9b29-e22488058ffc ;
+    cti:indicatorType "malicious-activity" ;
+    cti:objectMarking ex:marking-definition--d81f86b9-975b-4c0b-875e-810c5ad45a4f,
+        ex:marking-definition--f88d31f6-486f-44da-b317-01333bde0b82 ;
+    cti:patternType "stix" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-14T13:07:49.812Z" ;
+    cti:stixModified "2017-04-14T13:07:49.812Z" ;
+    cti:stixPattern "[ipv4-addr:value = '10.0.0.0']" ;
+    cti:validFrom "2017-04-14T13:07:49.812Z" ;
+    core:description "Detected malicious activity from this address" ;
+    core:name "Known malicious IP Address" .
+
+ex:relationship--06964095-5750-41fe-a9af-6c6a9d995489 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.940Z" ;
+    cti:stixModified "2020-02-29T17:41:44.940Z" ;
+    core:kindOfRelationship "uses" ;
+    core:source ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 ;
+    core:target ex:attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a .
+
+ex:relationship--1f4ee02a-7f6e-45a6-aedd-c1492af5e179 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.942Z" ;
+    cti:stixModified "2020-02-29T17:41:44.942Z" ;
+    core:kindOfRelationship "targets" ;
+    core:source ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727 ;
+    core:target ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b .
+
+ex:relationship--29dcdf68-1b0c-4e16-94ed-bcc7a9572f69 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T18:09:12.808Z" ;
+    cti:stixModified "2020-02-29T18:09:12.808Z" ;
+    core:kindOfRelationship "indicates" ;
+    core:source ex:indicator--a932fcc6-e032-476c-826f-cb970a5a1ade ;
+    core:target ex:malware--fdd60b30-b67c-41e3-b0b9-f01faf20d111 .
+
+ex:relationship--33c22977-d104-45d8-be19-273f7ab03de1 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.940Z" ;
+    cti:stixModified "2020-02-29T17:41:44.940Z" ;
+    core:kindOfRelationship "uses" ;
+    core:source ex:campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e ;
+    core:target ex:attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a .
+
+ex:relationship--3cd2d6f9-0ded-486b-8dca-606283a8997f a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T18:18:08.661Z" ;
+    cti:stixModified "2020-02-29T18:18:08.661Z" ;
+    core:kindOfRelationship "uses" ;
+    core:source ex:threat-actor--9a8a0d25-7636-429b-a99e-b2a73cd0f11f ;
+    core:target ex:attack-pattern--8ac90ff3-ecf8-4835-95b8-6aea6a623df5 .
+
+ex:relationship--3d1dd3cc-eb47-4704-9c77-ceff2971b95c a core:Relationship ;
+    cti:objectMarking ex:marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ed ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-27T16:18:24.318Z" ;
+    cti:stixModified "2017-04-27T16:18:24.318Z" ;
+    core:kindOfRelationship "indicates" ;
+    core:source ex:indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1 ;
+    core:target ex:threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c .
+
+ex:relationship--4292a6df-fb16-43d1-805d-dc1b33946fdf a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.941Z" ;
+    cti:stixModified "2020-02-29T17:41:44.941Z" ;
+    core:kindOfRelationship "targets" ;
+    core:source ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 ;
+    core:target ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b .
+
+ex:relationship--4bd67b9e-d112-4ea6-98bb-080a051667c7 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.941Z" ;
+    cti:stixModified "2020-02-29T17:41:44.941Z" ;
+    core:kindOfRelationship "attributed-to" ;
+    core:source ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 ;
+    core:target ex:identity--8c6af861-7b20-41ef-9b59-6344fd872a8f .
+
+ex:relationship--4fe5dab1-fd6d-41aa-b8b1-d3118a708284 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.940Z" ;
+    cti:stixModified "2020-02-29T17:41:44.940Z" ;
+    core:kindOfRelationship "uses" ;
+    core:source ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 ;
+    core:target ex:attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c .
+
+ex:relationship--5047c2c0-524b-4afd-9cd6-e197efe59495 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.939Z" ;
+    cti:stixModified "2020-02-29T17:41:44.939Z" ;
+    core:kindOfRelationship "attributed-to" ;
+    core:source ex:campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e ;
+    core:target ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 .
+
+ex:relationship--53a55c73-f2c8-47b9-8e50-ae34d8c5da4d a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.938Z" ;
+    cti:stixModified "2020-02-29T17:41:44.938Z" ;
+    core:kindOfRelationship "attributed-to" ;
+    core:source ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727 ;
+    core:target ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 .
+
+ex:relationship--554e3341-d7b1-4b3c-a522-28ef52fbb49b a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.939Z" ;
+    cti:stixModified "2020-02-29T17:41:44.939Z" ;
+    core:kindOfRelationship "targets" ;
+    core:source ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 ;
+    core:target ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b .
+
+ex:relationship--56e5f1c8-08f3-4e24-9e8e-f87d844672ec a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T18:18:08.661Z" ;
+    cti:stixModified "2020-02-29T18:18:08.661Z" ;
+    core:kindOfRelationship "attributed-to" ;
+    core:source ex:threat-actor--9a8a0d25-7636-429b-a99e-b2a73cd0f11f ;
+    core:target ex:identity--1621d4d4-b67d-41e3-9670-f01faf20d111 .
+
+ex:relationship--70880ead-0b19-4785-be52-a69064d4cb6c a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.942Z" ;
+    cti:stixModified "2020-02-29T17:41:44.942Z" ;
+    core:kindOfRelationship "uses" ;
+    core:source ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 ;
+    core:target ex:attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c .
+
+ex:relationship--864af2ea-46f9-4d23-b3a2-1c2adf81c265 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T18:03:58.029Z" ;
+    cti:stixModified "2020-02-29T18:03:58.029Z" ;
+    core:kindOfRelationship "indicates" ;
+    core:source ex:indicator--d81f86b9-975b-4c0b-875e-810c5ad45a4f ;
+    core:target ex:malware--162d917e-766f-4611-b5d6-652791454fca .
+
+ex:relationship--8848cba9-4c7b-4695-bc09-5033a6f20ff4 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.941Z" ;
+    cti:stixModified "2020-02-29T17:41:44.941Z" ;
+    core:kindOfRelationship "uses" ;
+    core:source ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727 ;
+    core:target ex:attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c .
+
+ex:relationship--96cfbc6f-5c08-4372-b811-b90fbb2ec180 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.940Z" ;
+    cti:stixModified "2020-02-29T17:41:44.940Z" ;
+    core:kindOfRelationship "targets" ;
+    core:source ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727 ;
+    core:target ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b .
+
+ex:relationship--98765000-efdf-4a86-8681-36481ceae57f a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.938Z" ;
+    cti:stixModified "2020-02-29T17:41:44.938Z" ;
+    core:kindOfRelationship "attributed-to" ;
+    core:source ex:campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e ;
+    core:target ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 .
+
+ex:relationship--9cc131ca-b64d-4ab1-a300-5e4a0073280a a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.939Z" ;
+    cti:stixModified "2020-02-29T17:41:44.939Z" ;
+    core:kindOfRelationship "attributed-to" ;
+    core:source ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727 ;
+    core:target ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 .
+
+ex:relationship--a20b8626-a15e-41f0-bcb1-c05321e126f0 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2015-05-15T09:12:16.432Z" ;
+    cti:stixModified "2015-05-15T09:12:16.432Z" ;
+    core:kindOfRelationship "attributed-to" ;
+    core:source ex:threat-actor--6d179234-61fc-40c4-ae86-3d53308d8e65 ;
+    core:target ex:identity--e88ab115-7768-4630-baa3-3d49a7d946ea .
+
+ex:relationship--a2e3efb5-351d-4d46-97a0-6897ee7c77a0 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T18:01:28.577Z" ;
+    cti:stixModified "2020-02-29T18:01:28.577Z" ;
+    core:kindOfRelationship "attributed-to" ;
+    core:source ex:threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428 ;
+    core:target ex:identity--733c5838-34d9-4fbf-949c-62aba761184c .
+
+ex:relationship--a97b3ea5-4ca1-46a0-a7ad-f10143ce22b2 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.941Z" ;
+    cti:stixModified "2020-02-29T17:41:44.941Z" ;
+    core:kindOfRelationship "impersonates" ;
+    core:source ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 ;
+    core:target ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b .
+
+ex:relationship--b345f1d0-09c5-4a71-bfc6-a52bd5923a01 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2015-05-15T09:12:16.432Z" ;
+    cti:stixModified "2015-05-15T09:12:16.432Z" ;
+    core:kindOfRelationship "indicates" ;
+    core:source ex:indicator--8390fd29-24ed-45d4-84d7-c5e5feaf195d ;
+    core:target ex:threat-actor--6d179234-61fc-40c4-ae86-3d53308d8e65 .
+
+ex:relationship--ba30893a-400a-43f3-b193-69d65d2a8f40 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.942Z" ;
+    cti:stixModified "2020-02-29T17:41:44.942Z" ;
+    core:kindOfRelationship "uses" ;
+    core:source ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 ;
+    core:target ex:attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a .
+
+ex:relationship--c171fd27-2a8a-42b7-8293-34016b70c1c8 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.939Z" ;
+    cti:stixModified "2020-02-29T17:41:44.939Z" ;
+    core:kindOfRelationship "attributed-to" ;
+    core:source ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 ;
+    core:target ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 .
+
+ex:relationship--d44019b6-b8f7-4cb3-837e-7fd3c5724b87 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T18:18:08.661Z" ;
+    cti:stixModified "2020-02-29T18:18:08.661Z" ;
+    core:kindOfRelationship "uses" ;
+    core:source ex:threat-actor--9a8a0d25-7636-429b-a99e-b2a73cd0f11f ;
+    core:target ex:malware--d1c612bc-146f-4b65-b7b0-9a54a14150a4 .
+
+ex:relationship--d8b7932d-0ecb-4891-b021-c78ff2b63747 a core:Relationship ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2020-02-29T17:41:44.940Z" ;
+    cti:stixModified "2020-02-29T17:41:44.940Z" ;
+    core:kindOfRelationship "targets" ;
+    core:source ex:campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e ;
+    core:target ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b .
+
+ex:sighting--779c4ae8-e134-4180-baa4-03141095d971 a core:Relationship ;
+    cti:createdBy ex:identity--987eeee1-413a-44ac-96cc-0a8acdcc2f2c ;
+    cti:firstSeen "2017-02-28T19:07:24.856Z" ;
+    cti:lastSeen "2017-02-28T19:07:24.857Z" ;
+    cti:observedDataRef ex:observed-data--a0d34360-66ad-4977-b255-d9e1080421c4,
+        ex:observed-data--cf8eaa41-6f4c-482e-89b9-9cd2d6a83cb1 ;
+    cti:sightingCount 1 ;
+    cti:sightingOf ex:malware--ae560258-a5cb-4be8-8f05-013d6712295f ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-02-28T19:37:11.213Z" ;
+    cti:stixModified "2017-02-28T19:37:11.213Z" ;
+    cti:whereSighted ex:identity--987eeee1-413a-44ac-96cc-0a8acdcc2f2c .
+
+ex:sighting--8356e820-8080-4692-aa91-ecbe94006833 a core:Relationship ;
+    cti:createdBy ex:identity--5206ba14-478f-4b0b-9a48-395f690c20a2 ;
+    cti:firstSeen "2017-02-27T21:37:11.213Z" ;
+    cti:lastSeen "2017-02-27T21:37:11.214Z" ;
+    cti:sightingCount 1 ;
+    cti:sightingOf ex:indicator--9299f726-ce06-492e-8472-2b52ccb53191 ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-02-28T19:37:11.213Z" ;
+    cti:stixModified "2017-02-28T19:37:11.213Z" ;
+    cti:whereSighted ex:identity--5206ba14-478f-4b0b-9a48-395f690c20a2 .
+
+ex:attack-pattern--8ac90ff3-ecf8-4835-95b8-6aea6a623df5 a action:ActionPattern ;
+    cti:externalReference "{\"source_name\": \"capec\", \"description\": \"phishing\", \"url\": \"https://capec.mitre.org/data/definitions/98.html\", \"external_id\": \"CAPEC-98\"}" ;
+    cti:killChainPhase "{\"kill_chain_name\": \"mandiant-attack-lifecycle-model\", \"phase_name\": \"initial-compromise\"}" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2015-05-07T14:22:14.760Z" ;
+    cti:stixModified "2015-05-07T14:22:14.760Z" ;
+    core:description "Spear phishing used as a delivery mechanism for malware." ;
+    core:name "Phishing" .
+
+ex:file--364fe3e5-b1f4-5ba3-b951-ee5983b3538d a cti:UnknownStixObject ;
+    cti:specVersion "2.1" ;
+    core:name "resume.pdf" .
+
+ex:identity--1621d4d4-b67d-41e3-9670-f01faf20d111 a identity:Identity ;
+    cti:identityClass "unknown" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2015-05-10T16:27:17.760Z" ;
+    cti:stixModified "2015-05-10T16:27:17.760Z" ;
+    core:description "Adversary Bravo is a threat actor that utilizes phishing attacks." ;
+    core:name "Adversary Bravo" .
+
+ex:identity--39012926-a052-44c4-ae48-caaf4a10ee6e a identity:Identity,
+        identity:Organization ;
+    cti:identityClass "organization" ;
+    cti:role "Cyber Security" ;
+    cti:sector "technology" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-02-24T15:50:10.564Z" ;
+    cti:stixModified "2017-02-24T15:50:10.564Z" ;
+    core:name "Alpha Threat Analysis Org." .
+
+ex:identity--611d9d41-dba5-4e13-9b29-e22488058ffc a identity:Identity,
+        identity:Organization ;
+    cti:identityClass "organization" ;
+    cti:sector "defense" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-14T13:07:49.812Z" ;
+    cti:stixModified "2017-04-14T13:07:49.812Z" ;
+    core:name "Stark Industries" .
+
+ex:identity--733c5838-34d9-4fbf-949c-62aba761184c a identity:Identity,
+        identity:Organization ;
+    cti:identityClass "organization" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2016-08-23T18:05:49.307Z" ;
+    cti:stixModified "2016-08-23T18:05:49.307Z" ;
+    core:description "Disco Team is the name of an organized threat actor crime-syndicate." ;
+    core:name "Disco Team" .
+
+ex:identity--7865b6d2-a4af-45c5-b582-afe5ec376c33 a identity:Identity,
+        identity:Organization ;
+    cti:identityClass "organization" ;
+    cti:sector "technology" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2013-04-14T13:07:49.812Z" ;
+    cti:stixModified "2013-04-14T13:07:49.812Z" ;
+    core:name "Pym Technologies" .
+
+ex:identity--8c6af861-7b20-41ef-9b59-6344fd872a8f a identity:Identity,
+        identity:Organization ;
+    cti:identityClass "organization" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
+    cti:stixModified "2016-08-08T15:50:10.983Z" ;
+    core:name "Franistan Intelligence" .
+
+ex:identity--e88ab115-7768-4630-baa3-3d49a7d946ea a identity:Identity ;
+    cti:identityClass "individual" ;
+    cti:sector "government-national" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2015-05-15T09:12:16.432Z" ;
+    cti:stixModified "2015-05-15T09:12:16.432Z" ;
+    core:name "Wang Dong" .
+
+ex:indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1 a pattern:Pattern ;
+    cti:createdBy ex:identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca ;
+    cti:granularMarking "{\"marking_ref\": \"marking-definition--34098fce-860f-48ae-8e50-ebd3cc5e41da\", \"selectors\": [\"indicator_types.[0]\", \"name\", \"pattern\"]}",
+        "{\"marking_ref\": \"marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ed\", \"selectors\": [\"description\"]}",
+        "{\"marking_ref\": \"marking-definition--f88d31f6-486f-44da-b317-01333bde0b82\", \"selectors\": [\"indicator_types.[1]\"]}" ;
+    cti:indicatorType "attribution",
+        "malicious-activity" ;
+    cti:patternType "stix" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-27T16:18:24.318Z" ;
+    cti:stixModified "2017-04-27T16:18:24.318Z" ;
+    cti:stixPattern "[email-message:from_ref.value MATCHES '.+\\\\banking@g0thamnatl\\\\.com$']" ;
+    cti:validFrom "2017-04-27T16:18:24.318Z" ;
+    core:description "Known to be used by The Joker." ;
+    core:name "Fake email address" .
+
+ex:indicator--8390fd29-24ed-45d4-84d7-c5e5feaf195d a pattern:Pattern ;
+    cti:indicatorType "malicious-activity" ;
+    cti:patternType "stix" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2015-05-15T09:12:16.432Z" ;
+    cti:stixModified "2015-05-15T09:12:16.432Z" ;
+    cti:stixPattern "[domain-name:value = 'arrowservice.net']" ;
+    cti:validFrom "2015-05-15T09:12:16.432678Z" ;
+    core:description "Test description." ;
+    core:name "FQDN arrowservice.net" .
+
+ex:indicator--9299f726-ce06-492e-8472-2b52ccb53191 a pattern:Pattern ;
+    cti:createdBy ex:identity--39012926-a052-44c4-ae48-caaf4a10ee6e ;
+    cti:indicatorType "malicious-activity" ;
+    cti:patternType "stix" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-02-27T13:57:10.515Z" ;
+    cti:stixModified "2017-02-27T13:57:10.515Z" ;
+    cti:stixPattern "[url:value = 'http://paypa1.banking.com']" ;
+    cti:validFrom "2015-06-29T09:10:15.915Z" ;
+    core:description "This URL is potentially associated with malicious activity and is listed on several blacklist sites." ;
+    core:name "Malicious URL" .
+
+ex:indicator--a932fcc6-e032-476c-826f-cb970a5a1ade a pattern:Pattern ;
+    cti:indicatorType "malicious-activity" ;
+    cti:patternType "stix" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2014-02-20T09:16:08.989Z" ;
+    cti:stixModified "2014-02-20T09:16:08.989Z" ;
+    cti:stixPattern "[file:hashes.'SHA-256' = 'ef537f25c895bfa782526529a9b63d97aa631564d5d789c2b765448c8635fb6c']" ;
+    cti:validFrom "2014-02-20T09:00:00Z" ;
+    core:description "This file hash indicates that a sample of Poison Ivy is present." ;
+    core:name "File hash for Poison Ivy variant" .
+
+ex:indicator--d81f86b9-975b-4c0b-875e-810c5ad45a4f a pattern:Pattern ;
+    cti:indicatorType "malicious-activity" ;
+    cti:patternType "stix" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2014-06-29T13:49:37.079Z" ;
+    cti:stixModified "2014-06-29T13:49:37.079Z" ;
+    cti:stixPattern "[url:value = 'http://x4z9arb.cn/4712/']" ;
+    cti:validFrom "2014-06-29T13:49:37.079Z" ;
+    core:description "This organized threat actor group operates to create profit from all types of crime." ;
+    core:name "Malicious site hosting downloader" .
+
+ex:malware--162d917e-766f-4611-b5d6-652791454fca a tool:MaliciousTool ;
+    cti:isFamily false ;
+    cti:killChainPhase "{\"kill_chain_name\": \"mandiant-attack-lifecycle-model\", \"phase_name\": \"establish-foothold\"}" ;
+    cti:malwareType "backdoor",
+        "remote-access-trojan" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2014-06-30T09:15:17.182Z" ;
+    cti:stixModified "2014-06-30T09:15:17.182Z" ;
+    core:description "This malware attempts to download remote files after establishing a foothold as a backdoor." ;
+    core:name "x4z9arb backdoor" .
+
+ex:malware--ae560258-a5cb-4be8-8f05-013d6712295f a tool:MaliciousTool ;
+    cti:createdBy ex:identity--7865b6d2-a4af-45c5-b582-afe5ec376c33 ;
+    cti:isFamily false ;
+    cti:malwareType "remote-access-trojan" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2014-02-20T09:16:08.989Z" ;
+    cti:stixModified "2014-02-20T09:16:08.989Z" ;
+    core:description "Trojan that is disguised as the executable file resume.pdf., it also creates a registry key." ;
+    core:name "Online Job Site Trojan" .
+
+ex:malware--d1c612bc-146f-4b65-b7b0-9a54a14150a4 a tool:MaliciousTool ;
+    cti:isFamily false ;
+    cti:killChainPhase "{\"kill_chain_name\": \"mandiant-attack-lifecycle-model\", \"phase_name\": \"initial-compromise\"}" ;
+    cti:malwareType "remote-access-trojan" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2015-04-23T11:12:34.760Z" ;
+    cti:stixModified "2015-04-23T11:12:34.760Z" ;
+    core:name "Poison Ivy Variant d1c6" .
+
+ex:malware--fdd60b30-b67c-41e3-b0b9-f01faf20d111 a tool:MaliciousTool ;
+    cti:isFamily false ;
+    cti:malwareType "remote-access-trojan" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2014-02-20T09:16:08.989Z" ;
+    cti:stixModified "2014-02-20T09:16:08.989Z" ;
+    core:name "Poison Ivy" .
+
+ex:marking-definition--d81f86b9-975b-4c0b-875e-810c5ad45a4f a core:MarkingDefinitionAbstraction ;
+    cti:definition "{'statement': 'Copyright (c) Stark Industries 2017.'}" ;
+    cti:definitionType "statement" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-14T13:07:49.812Z" .
+
+ex:marking-definition--f88d31f6-486f-44da-b317-01333bde0b82 a core:MarkingDefinitionAbstraction ;
+    cti:definition "{'tlp': 'amber'}" ;
+    cti:definitionType "tlp" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-01-20T00:00:00.000Z" ;
+    core:name "TLP:AMBER" .
+
+ex:observed-data--a0d34360-66ad-4977-b255-d9e1080421c4 a core:Event ;
+    cti:createdBy ex:identity--987eeee1-413a-44ac-96cc-0a8acdcc2f2c ;
+    cti:firstObserved "2017-02-27T21:37:11.213Z" ;
+    cti:lastObserved "2017-02-27T21:37:11.214Z" ;
+    cti:numberObserved 1 ;
+    cti:referencesObject ex:windows-registry-key--16b80d14-d574-5620-abad-10ff304b1c26 ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-02-28T19:37:11.213Z" ;
+    cti:stixModified "2017-02-28T19:37:11.213Z" .
+
+ex:observed-data--cf8eaa41-6f4c-482e-89b9-9cd2d6a83cb1 a core:Event ;
+    cti:createdBy ex:identity--987eeee1-413a-44ac-96cc-0a8acdcc2f2c ;
+    cti:firstObserved "2017-02-27T21:37:11.213Z" ;
+    cti:lastObserved "2017-02-27T21:37:11.213Z" ;
+    cti:numberObserved 1 ;
+    cti:referencesObject ex:file--364fe3e5-b1f4-5ba3-b951-ee5983b3538d ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-02-28T19:37:11.213Z" ;
+    cti:stixModified "2017-02-28T19:37:11.213Z" .
+
+ex:threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c a identity:Organization ;
+    cti:alias "Joe Kerr",
+        "The Clown Prince of Crime" ;
+    cti:createdBy ex:identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca ;
+    cti:objectMarking ex:marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ed ;
+    cti:primaryMotivation "personal-satisfaction" ;
+    cti:resourceLevel "team" ;
+    cti:role "director" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-27T16:18:24.318Z" ;
+    cti:stixModified "2017-04-27T16:18:24.318Z" ;
+    cti:threatActorType "criminal",
+        "terrorist" ;
+    core:name "The Joker" .
+
+ex:threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428 a identity:Organization ;
+    cti:alias "Equipo del Discoteca" ;
+    cti:goal "Steal Credit Card Information" ;
+    cti:primaryMotivation "personal-gain" ;
+    cti:resourceLevel "organization" ;
+    cti:role "agent" ;
+    cti:sophistication "expert" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2014-11-19T23:39:03.893Z" ;
+    cti:stixModified "2014-11-19T23:39:03.893Z" ;
+    cti:threatActorType "crime-syndicate" ;
+    core:description "This organized threat actor group operates to create profit from all types of crime." ;
+    core:name "Disco Team Threat Actor Group" .
+
+ex:windows-registry-key--16b80d14-d574-5620-abad-10ff304b1c26 a cti:UnknownStixObject ;
+    cti:specVersion "2.1" .
+
+ex:identity--5206ba14-478f-4b0b-9a48-395f690c20a2 a identity:Identity,
+        identity:Organization ;
+    cti:identityClass "organization" ;
+    cti:role "Cyber Security" ;
+    cti:sector "technology" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-02-26T17:55:10.442Z" ;
+    cti:stixModified "2017-02-26T17:55:10.442Z" ;
+    core:name "Beta Cyber Intelligence Company" .
+
+ex:identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca a identity:Identity,
+        identity:Organization ;
+    cti:identityClass "organization" ;
+    cti:sector "financial-services" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-27T16:18:24.318Z" ;
+    cti:stixModified "2017-04-27T16:18:24.318Z" ;
+    core:name "Gotham National Bank" .
+
+ex:threat-actor--6d179234-61fc-40c4-ae86-3d53308d8e65 a identity:Organization ;
+    cti:alias "Greenfield",
+        "JackWang",
+        "Wang Dong" ;
+    cti:primaryMotivation "organizational-gain" ;
+    cti:resourceLevel "government" ;
+    cti:role "agent",
+        "infrastructure-operator",
+        "malware-author" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2015-05-15T09:12:16.432Z" ;
+    cti:stixModified "2015-05-15T09:12:16.432Z" ;
+    cti:threatActorType "nation-state",
+        "spy" ;
+    core:name "Ugly Gorilla" .
+
+ex:attack-pattern--19da6e1c-71ab-4c2f-886d-d620d09d3b5a a action:ActionPattern ;
+    cti:externalReference "{\"source_name\": \"capec\", \"url\": \"https://capec.mitre.org/data/definitions/148.html\", \"external_id\": \"CAPEC-148\"}" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
+    cti:stixModified "2017-01-30T21:15:04.127Z" ;
+    core:name "Content Spoofing" .
+
+ex:attack-pattern--f6050ea6-a9a3-4524-93ed-c27858d6cb3c a action:ActionPattern ;
+    cti:externalReference "{\"source_name\": \"capec\", \"url\": \"https://capec.mitre.org/data/definitions/488.html\", \"external_id\": \"CAPEC-488\"}" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
+    cti:stixModified "2017-01-30T21:15:04.127Z" ;
+    core:name "HTTP Flood" .
+
+ex:threat-actor--9a8a0d25-7636-429b-a99e-b2a73cd0f11f a identity:Organization ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2015-05-07T14:22:14.760Z" ;
+    cti:stixModified "2015-05-07T14:22:14.760Z" ;
+    cti:threatActorType "criminal",
+        "spy" ;
+    core:description "Adversary Bravo is known to use phishing attacks to deliver remote access malware to the targets." ;
+    core:name "Adversary Bravo" .
+
+ex:campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e a core:Event ;
+    cti:alias "OBF" ;
+    cti:firstSeen "2016-01-08T12:50:40.123Z" ;
+    cti:objective "Hack www.bpp.bn" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
+    cti:stixModified "2016-08-08T15:50:10.983Z" ;
+    core:description "A concerted effort to insert false information into the BPP's web pages." ;
+    core:name "Operation Bran Flakes" .
+
+ex:identity--987eeee1-413a-44ac-96cc-0a8acdcc2f2c a identity:Identity,
+        identity:Organization ;
+    cti:identityClass "organization" ;
+    cti:sector "technology" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-01-14T13:07:49.812Z" ;
+    cti:stixModified "2017-01-14T13:07:49.812Z" ;
+    core:name "Oscorp Industries" .
+
+ex:campaign--1d8897a7-fdc2-4e59-afc9-becbe04df727 a core:Event ;
+    cti:alias "ORB" ;
+    cti:firstSeen "2016-02-07T19:45:32.126Z" ;
+    cti:objective "Flood www.bpp.bn" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
+    cti:stixModified "2016-08-08T15:50:10.983Z" ;
+    core:description "A DDOS campaign to flood BPP web servers." ;
+    core:name "Operation Raisin Bran" .
+
+ex:identity--ddfe7140-2ba4-48e4-b19a-df069432103b a identity:Identity,
+        identity:Organization ;
+    cti:externalReference "{\"source_name\": \"website\", \"url\": \"http://www.bpp.bn\"}" ;
+    cti:identityClass "organization" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
+    cti:stixModified "2016-08-08T15:50:10.983Z" ;
+    core:name "Branistan Peoples Party" .
+
+ex:intrusion-set--ed69450a-f067-4b51-9ba2-c4616b9a6713 a identity:Identity ;
+    cti:alias "Bran-teaser" ;
+    cti:firstSeen "2016-01-08T12:50:40.123Z" ;
+    cti:goal "Disrupt the BPP",
+        "Influence the Branistan election" ;
+    cti:primaryMotivation "ideology" ;
+    cti:resourceLevel "government" ;
+    cti:secondaryMotivation "dominance" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
+    cti:stixModified "2016-08-08T15:50:10.983Z" ;
+    core:description "An advanced persistent threat that seeks to disrupt Branistan's election with multiple attacks." ;
+    core:name "APT BPP" .
+
+ex:threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500 a identity:Organization ;
+    cti:goal "Influence the election in Branistan" ;
+    cti:primaryMotivation "ideology" ;
+    cti:resourceLevel "government" ;
+    cti:role "director" ;
+    cti:secondaryMotivation "dominance" ;
+    cti:sophistication "strategic" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2016-08-08T15:50:10.983Z" ;
+    cti:stixModified "2016-08-08T15:50:10.983Z" ;
+    cti:threatActorType "nation-state" ;
+    core:name "Fake BPP (Branistan Peoples Party)" .
+

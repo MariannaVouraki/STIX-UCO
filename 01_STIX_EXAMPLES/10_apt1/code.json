@@ -1,0 +1,78 @@
+{
+  "type": "bundle",
+  "id": "bundle--cf20f99b-3ed2-4a9f-b4f1-d660a7fc8324",
+  "objects": [  
+   {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--e88ab115-7768-4630-baa3-3d49a7d946ea",
+      "created": "2015-05-15T09:12:16.432Z",
+      "modified": "2015-05-15T09:12:16.432Z",
+      "name": "Wang Dong",
+      "identity_class": "individual",
+      "sectors": [
+        "government-national"
+      ],
+      "contact_information": "uglygorilla@163.com"
+    },
+     {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a20b8626-a15e-41f0-bcb1-c05321e126f0",
+      "created": "2015-05-15T09:12:16.432Z",
+      "modified": "2015-05-15T09:12:16.432Z",
+      "relationship_type": "attributed-to",
+      "source_ref": "threat-actor--6d179234-61fc-40c4-ae86-3d53308d8e65",
+      "target_ref": "identity--e88ab115-7768-4630-baa3-3d49a7d946ea"
+    }, 
+{
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--6d179234-61fc-40c4-ae86-3d53308d8e65",
+      "created": "2015-05-15T09:12:16.432Z",
+      "modified": "2015-05-15T09:12:16.432Z",
+      "name": "Ugly Gorilla",
+      "threat_actor_types": [
+        "nation-state",
+        "spy"
+      ],
+      "roles": [
+        "malware-author",
+        "agent",
+        "infrastructure-operator"
+      ],
+      "resource_level": "government",
+      "aliases": [
+        "Greenfield",
+        "JackWang",
+        "Wang Dong"
+      ],
+      "primary_motivation": "organizational-gain"
+      },
+ {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b345f1d0-09c5-4a71-bfc6-a52bd5923a01",
+      "created": "2015-05-15T09:12:16.432Z",
+      "modified": "2015-05-15T09:12:16.432Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--8390fd29-24ed-45d4-84d7-c5e5feaf195d",
+      "target_ref": "threat-actor--6d179234-61fc-40c4-ae86-3d53308d8e65"
+    },
+ {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "pattern_type": "stix",
+      "id": "indicator--8390fd29-24ed-45d4-84d7-c5e5feaf195d",
+      "created": "2015-05-15T09:12:16.432Z",
+      "modified": "2015-05-15T09:12:16.432Z",
+      "name": "FQDN arrowservice.net",
+      "description": "Test description.",
+      "pattern": "[domain-name:value = 'arrowservice.net']",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2015-05-15T09:12:16.432678Z"
+    }
+    ]
+}

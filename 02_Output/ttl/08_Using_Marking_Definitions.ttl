@@ -1,0 +1,48 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix cti: <http://example.org/cti-ext/> .
+@prefix ex: <http://example.org/stix-uco/> .
+@prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix pattern: <https://ontology.unifiedcyberontology.org/uco/pattern/> .
+
+ex:bundle--dbe491fe-6faf-4125-b019-d8938bc0294d a core:Bundle ;
+    cti:hasMember ex:identity--611d9d41-dba5-4e13-9b29-e22488058ffc,
+        ex:indicator--33fe3b22-0201-47cf-85d0-97c02164528d,
+        ex:marking-definition--d81f86b9-975b-4c0b-875e-810c5ad45a4f,
+        ex:marking-definition--f88d31f6-486f-44da-b317-01333bde0b82 .
+
+ex:indicator--33fe3b22-0201-47cf-85d0-97c02164528d a pattern:Pattern ;
+    cti:createdBy ex:identity--611d9d41-dba5-4e13-9b29-e22488058ffc ;
+    cti:indicatorType "malicious-activity" ;
+    cti:objectMarking ex:marking-definition--d81f86b9-975b-4c0b-875e-810c5ad45a4f,
+        ex:marking-definition--f88d31f6-486f-44da-b317-01333bde0b82 ;
+    cti:patternType "stix" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-14T13:07:49.812Z" ;
+    cti:stixModified "2017-04-14T13:07:49.812Z" ;
+    cti:stixPattern "[ipv4-addr:value = '10.0.0.0']" ;
+    cti:validFrom "2017-04-14T13:07:49.812Z" ;
+    core:description "Detected malicious activity from this address" ;
+    core:name "Known malicious IP Address" .
+
+ex:identity--611d9d41-dba5-4e13-9b29-e22488058ffc a identity:Identity,
+        identity:Organization ;
+    cti:identityClass "organization" ;
+    cti:sector "defense" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-14T13:07:49.812Z" ;
+    cti:stixModified "2017-04-14T13:07:49.812Z" ;
+    core:name "Stark Industries" .
+
+ex:marking-definition--d81f86b9-975b-4c0b-875e-810c5ad45a4f a core:MarkingDefinitionAbstraction ;
+    cti:definition "{'statement': 'Copyright (c) Stark Industries 2017.'}" ;
+    cti:definitionType "statement" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-04-14T13:07:49.812Z" .
+
+ex:marking-definition--f88d31f6-486f-44da-b317-01333bde0b82 a core:MarkingDefinitionAbstraction ;
+    cti:definition "{'tlp': 'amber'}" ;
+    cti:definitionType "tlp" ;
+    cti:specVersion "2.1" ;
+    cti:stixCreated "2017-01-20T00:00:00.000Z" ;
+    core:name "TLP:AMBER" .
+
